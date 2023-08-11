@@ -5,10 +5,8 @@
 // 50 => 0 час 50 минут
 // 240 => 4 час 0 минут'
 
-
 const timeM = +prompt();
 
-const timeH = Math.floor(timeM/60);
+const timeH = Math.floor(timeM / 60);
 
-
-console.log(timeH + 'часов' + timeM%60 + 'минут')
+console.log(timeH + "часов" + (timeM % 60) + "минут");

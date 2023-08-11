@@ -5,8 +5,8 @@
 const a = 10;
 const b = 3;
 
-if(Number.isInteger(a/b)){
-    console.log('eee')
-}else{
-    console.log('делиться с остатком ' + a%b);
+if (Number.isInteger(a / b)) {
+  console.log("eee");
+} else {
+  console.log("делиться с остатком " + (a % b));
 }

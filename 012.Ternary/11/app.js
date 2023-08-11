@@ -3,12 +3,10 @@
 // 345 -> 3
 // 100 -> 1
 
-
 let a = +prompt();
 
-if (Number.isInteger){
-    alert(Math.floor(a/100))
-}
-else{
-    alert('error')
+if (Number.isInteger) {
+  alert(Math.floor(a / 100));
+} else {
+  alert("error");
 }

@@ -5,14 +5,12 @@
 const a = 8;
 const b = 0;
 
-const c = a%b;
+const c = a % b;
 
-if(c==0){
-    alert("Делиться")
+if (c == 0) {
+  alert("Делиться");
 }
-if(b==0)(
-    alert("На ноль делит только лох...")
-)
-else{
-    alert("Не делиться")
+if (b == 0) alert("На ноль делит только лох...");
+else {
+  alert("Не делиться");
 }

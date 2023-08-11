@@ -2,17 +2,14 @@
 // числе цифр, а также положительное оно или отрицательное. Например, "Число " +
 // num + " положительное". Добавить проверку на число
 
-
 const num = +prompt();
 
-if(isNaN(num)){
-    console.log('error')
-}   else{
-    if (num>=0){
-        console.log(`число положительное `,  num );
-    }
-    else{
-        console.log(`число отрицательное `,  num );
-    }
+if (isNaN(num)) {
+  console.log("error");
+} else {
+  if (num >= 0) {
+    console.log(`число положительное `, num);
+  } else {
+    console.log(`число отрицательное `, num);
+  }
 }
-

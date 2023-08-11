@@ -6,4 +6,4 @@
 
 const f = +prompt("Введите температуру в фаренгейтах");
 
-alert((5/9*((Number(f))-32)).toFixed(2));
+alert(((5 / 9) * (Number(f) - 32)).toFixed(2));

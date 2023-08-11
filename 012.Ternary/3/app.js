@@ -42,6 +42,6 @@ if (a === 1) {
   console.log("friday");
 } else if (a === 7) {
   console.log("satarday");
-} else{
-    console.log('wrong');
+} else {
+  console.log("wrong");
 }

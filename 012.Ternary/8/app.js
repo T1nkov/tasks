@@ -20,38 +20,38 @@ let a = prompt();
 switch (a) {
   case "12":
     alert("winter");
-    break
+    break;
   case "1":
     alert("winter");
-    break
+    break;
   case "2":
     alert("winter");
-    break
+    break;
   case "3":
-    alert('spring')
-    break
+    alert("spring");
+    break;
   case "4":
-    alert('spring')
-    break
+    alert("spring");
+    break;
   case "5":
-    alert('spring')
-    break
+    alert("spring");
+    break;
   case "6":
-    alert('summer')
-    break
+    alert("summer");
+    break;
   case "7":
-    alert('summer')
-    break
+    alert("summer");
+    break;
   case "8":
-    alert('summer')
-    break
+    alert("summer");
+    break;
   case "9":
-    alert('autum')
-    break
+    alert("autum");
+    break;
   case "10":
-    alert('autum')
-    break
+    alert("autum");
+    break;
   case "11":
-    alert('autum')
-    break
+    alert("autum");
+    break;
 }

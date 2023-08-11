@@ -3,12 +3,12 @@
 
 const age = +prompt();
 
-if (age === 0 || age<=18){
-    alert('детство')
-}else if (age>=19 && age<=40){
-    alert('молодость')
-}else if(age>=41 && age<=100){
-    alert('зрелость')
-}else{
-    alert('error')
+if (age === 0 || age <= 18) {
+  alert("детство");
+} else if (age >= 19 && age <= 40) {
+  alert("молодость");
+} else if (age >= 41 && age <= 100) {
+  alert("зрелость");
+} else {
+  alert("error");
 }

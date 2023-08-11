@@ -7,9 +7,7 @@ let a = +prompt();
 if (Number.isInteger) {
   if (a === 0) {
     alert("«Обратного числа не существует»");
-  }else(
-      alert(1/a)
-  )
+  } else alert(1 / a);
 } else {
   alert("введи число");
 }

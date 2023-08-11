@@ -12,7 +12,4 @@ let b = +prompt();
 
 // ТЕРНАРНЫЙ
 
-a>b?console.log(a + ' максимальное'): console.log(b + ' максимальное')
-
-
-
+a > b ? console.log(a + " максимальное") : console.log(b + " максимальное");

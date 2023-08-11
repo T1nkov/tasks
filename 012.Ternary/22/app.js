@@ -3,3 +3,7 @@
 // строку в строку вида
 // х-х-х-х-х-х...
 // hsChOoL -> h-s-c-h-o-o-l
+
+let str = "hsChOoL";
+
+console.log(str.toLowerCase().split("").join("-"));

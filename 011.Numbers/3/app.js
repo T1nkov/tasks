@@ -2,17 +2,12 @@
 // треугольнике и выводит его площадь. Используйте формулу:
 // S =1/2*a*b
 
-
 const a = +prompt("1 катет");
 const b = +prompt("2 катет");
 const e = 0.5;
 
-
-
-if (a>0 && b>0){
-    alert(Number(a)*(Number(b))*e)
+if (a > 0 && b > 0) {
+  alert(Number(a) * Number(b) * e);
+} else {
+  alert("ошибся");
 }
-else{
-    alert("ошибся")
-}
-

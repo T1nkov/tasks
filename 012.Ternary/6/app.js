@@ -4,15 +4,14 @@
 
 const num = prompt();
 
-if(isNaN(num)){
-    console.log("error");
-}else{
-    const sqrt = Math.sqrt(num);
+if (isNaN(num)) {
+  console.log("error");
+} else {
+  const sqrt = Math.sqrt(num);
 
-    if(Number.isInteger(sqrt)){
-        console.log(sqrt);
-    }
-    else{
-        console.log(Math.floor(sqrt));   
-    }
+  if (Number.isInteger(sqrt)) {
+    console.log(sqrt);
+  } else {
+    console.log(Math.floor(sqrt));
+  }
 }

@@ -7,16 +7,16 @@ if (Number.isInteger(a)) {
   switch (a) {
     case 1:
       alert("zima");
-      break
+      break;
     case 2:
       alert("vesna");
-      break
+      break;
     case 3:
       alert("leto");
-      break
+      break;
     case 4:
       alert("osen");
-      break
+      break;
   }
 } else {
   alert("errror");
