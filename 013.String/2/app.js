@@ -2,7 +2,7 @@
 //   ‘developer’]
   
 
-let a = prompt();
+let a = 'sdfassdfsdf';
 
 if (isNaN(a)) {
   console.log(a.split(""));

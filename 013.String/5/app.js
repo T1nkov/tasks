@@ -2,7 +2,7 @@
 // ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
 // Убрать лишние пробелы
 
-let str = prompt().trim();
+let str = 'lalalalala'.trim();
 
 if (isNaN(str)) {
   console.log(str[0].toUpperCase());
