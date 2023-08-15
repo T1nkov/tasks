@@ -4,12 +4,9 @@
 // anna_test_test -> annaTestTest
 
 let str = "anna_test_test".split("_");
-
-
-
-for (let i = 1; i < 3; i++) {
-   
-    console.log(str[i].toUpperCase(i));
-    console.log(str);
-    
+let res = str[0];
+for (let i = 1; i < str.length; i++) {
+  res += str[i][0].toUpperCase() + str[i].slice(1);
 }
+
+console.log(res);

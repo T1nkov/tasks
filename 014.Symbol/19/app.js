@@ -11,13 +11,13 @@ let t = 0;
 
 for (let i = 0; i < str.length; i++) {
   if (str[i] == "а") {
-    a += 1;
+    a ++;
   } else if (str[i] == "г") {
-    g += 1;
+    g ++;
   } else if (str[i] == "ц") {
-    c += 1;
+    c ++;
   } else if (str[i] == "т") {
-    t += 1;
+    t ++;
   }
 }
 
