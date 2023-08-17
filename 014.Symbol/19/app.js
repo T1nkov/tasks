@@ -21,4 +21,4 @@ for (let i = 0; i < str.length; i++) {
   }
 }
 
-console.log("А - " + a, "Г - " + g, "Ц - " + c, "Т - " + t);
+console.log("А - " + a, "Г - " + g, "Ц - " + c, "T - " + t);
