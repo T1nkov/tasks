@@ -14,3 +14,5 @@ if (!isNaN(num)) {
 
 arr.push(num);
 console.log(arr);
+
+let arr2 = 0;
