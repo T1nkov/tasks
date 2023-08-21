@@ -2,6 +2,6 @@
 // ровно одним пробелом. Напишите программу, которая подсчитывает количество
 // слов в ней
 
-let str = 'ban banana asfa agjsk kdfg'
+let str = 'ban banana asfsfgsf sdfgda agjsk kdfg'
 
 console.log(str.split(' ').length);
