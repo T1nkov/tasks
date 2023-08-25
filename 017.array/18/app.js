@@ -1,7 +1,13 @@
-let num = +prompt('vvedi element')
+// Пользователь вводит число, явдяющееся количеством элементов будущего
+// массива. Напишите код заполнения массива методом prompt.
 
-const res = []
+let lenArr = +prompt("Введи кол-во элементов");
 
-for (let i =0; i<numl; i++){
-  prompt('vvedi el massiva')
+let newArr = [];
+
+for (let i = 0; i < lenArr; i++) {
+  let num = prompt("Введи элемент массива");
+  newArr.push(num);
 }
+
+console.log(newArr);
