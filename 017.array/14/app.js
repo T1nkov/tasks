@@ -2,7 +2,7 @@
 // те числа из массива, которые начинаются на цифру 1, 2 или 5 -> 10, 20, 50, 235
 
 let arr = [10, 20, 30, 50, 235, 3000];
-
+console.log(arr[1][0]);
 let newArr = [];
 for (let i = 0; i < arr.length; i++) {
   if (arr[i] >= 10 && arr[i] <= 99) {
@@ -33,3 +33,4 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(newArr);
+
