@@ -16,7 +16,7 @@ for (let i = 0; i < n; i++) {
 // arr.forEach(function(elem){
 //     newArr.push("#" + elem)
 // })
-
+// sdfasd
 // console.log(newArr);
 
 let res = arr.map(function (elem) {
