@@ -3,24 +3,29 @@
 // значение которого имеет вид #name. map, forEach
 // [“hschool”, “company”] -> [“#hschool”, “#company”]
 
-let n = 5;
 
-let arr = [];
+const n = 5;
 
-for (let i = 0; i < n; i++) {
-  arr.push(prompt(""));
+const arr = []
+const newArr = []
+for(let i = 0; i<n; i++){
+
+  let str = prompt('')
+  if(isNaN(str)){
+    arr.push(str)
+  }
 }
 
-// let newArr = []
 
-// arr.forEach(function(elem){
-//     newArr.push("#" + elem)
-// })
-// sdfasd
-// console.log(newArr);
-
-let res = arr.map(function (elem) {
-  return "#" + elem;
-});
+const res = arr.map(function(elem){
+  // return "#" + elem 
+  return `#${elem}`
+})
 
 console.log(res);
+
+arr.forEach(function(elem){
+  newArr.push('#' + elem) 
+})
+
+console.log(newArr);
