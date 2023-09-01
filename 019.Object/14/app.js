@@ -21,13 +21,29 @@ const obj = {
   5: 2,
   6: 1,
 };
+const newObj = {
 
+}
+const nArr = [];
 
-for(const key in obj){
- 
-  // if(obj === obj++){
-  //   delete obj
-  // }
+const uniqArr = [];
+
+for (const key in obj) {
+  nArr.push(obj[key]);
 }
 
-console.log(obj);
+for (let i = 0; i < nArr.length; i++) {
+  if (!uniqArr.includes(nArr[i])) {
+    uniqArr.push(nArr[i]);
+  }
+}
+console.log(uniqArr);
+
+
+for (let i = 0; i < uniqArr.length; i++) {
+  newObj[i] = uniqArr[i];
+}
+
+
+
+console.log(newObj);
