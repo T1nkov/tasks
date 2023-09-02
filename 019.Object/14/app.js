@@ -37,13 +37,16 @@ for (let i = 0; i < nArr.length; i++) {
     uniqArr.push(nArr[i]);
   }
 }
-console.log(uniqArr);
+// console.log(uniqArr);
 
 
-for (let i = 0; i < uniqArr.length; i++) {
-  newObj[i] = uniqArr[i];
-}
+// for (let i = 0; i < uniqArr.length; i++) {
+//   newObj[i] = uniqArr[i];
+// }
+const res = {}
+nArr.forEach(function(elem, index){
+      res[index] = elem
 
+});
 
-
-console.log(newObj);
+console.log(res);
