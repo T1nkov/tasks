@@ -1,31 +1,23 @@
 // Напишите функцию, которая принимает массив строк и находит строку с
 // максимальной длиной. Добавить проверки
 
-const arr = ["asfd", "sdfasd", "sadfsdfdsafasdf", "sdaf32qrasdasdasdasderfsd"];
+const arr = ["asfd", "sdfasd", "sadfssdaf32qrasdaewsdasdasderfsdsdaf32qrasdaewsdasdasderfsdsdaf32qrasdaewsdasdasderfsdsdaf32qrasdaewsdasdasderfsdsdaf32qrasdaewsdasdasderfsddfdsafasdf", "sdaf32qrasdaewsdasdasderfsd"];
 
-let str = "";
-
-// const searchLong = (arr, str) => {
-//   for (let el of arr) {
-//     if (el.lenght > str.length) {
-//       str = el;
-//     }
-//     return str;
-//   }
-// };
-
-// searchLong(arr, str);
-
-
-
-searchLength = function (arr) {
-  for (let el of arr) {
-    let str = ''
-    if (el.length > str.length) {
-      str = el;
+function chechSTR(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > max) {
+      max = arr[i].length;
     }
-    console.log(str);
   }
-};
-const res = searchLength(arr)
+  const res = arr.filter(function(el){
+    if(el.length === max){
+      return el
+    }
+  })
+
+  return res
+}
+
+const res = chechSTR(arr);
 console.log(res);
