@@ -1,20 +1,18 @@
-// На входе строка. Необходимо создать функцию, возвращающую true, если это
-// слово палиндром и false в противном случае
+// Напишите функцию, принимающую в качестве параметра статичный объект.
+// Функция возвращает количество пар ключ / значение. IIFE
 
-const str = "an2na";
 
-function isValidSTR(str) {
-  return isNaN(str) ? true : false;
-}
+const obj = {
+  id: 1,
+  name: "dafa",
+  age: 23,
+  number: 1232,
+};
 
-function checkStr(str) {
-  const res = isValidSTR(str);
-  if (res === true) {
-    return str === str.split("").reverse("").join("") ? true : false;
-  } else {
-    return 'error'
+(function(obj){
+  let count = 0
+  for (let el in obj){
+    count++
   }
-}
-
-let res = checkStr(str);
-console.log(res);
+  console.log(count);
+}(obj))

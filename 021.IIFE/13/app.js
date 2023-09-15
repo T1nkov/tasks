@@ -1,24 +1,23 @@
-// На входе строка. Необходимо создать функцию, возвращающую true, если это
-// слово анаграмма и false в противном случае
+// Напишите функцию, генерирующую пароль из 8 символов с использованием
+// замыкния. (Math.random)
 
-const str_1 = "кулон";
-const str_2 = "клоун";
-function isValidSTR(str_1, str_2) {
-  if (!isNaN(str_1)) return false;
-  if (!isNaN(str_2)) return false;
-  return true;
-}
-
-function checkStr(str_1, str_2) {
-  const res = isValidSTR(str_1, str_2);
-  if (res === true) {
-    return str_1.split("").sort().join("") === str_2.split("").sort().join("")
-      ? true
-      : false;
-  } else {
-    return "error";
+function getPass (){
+  let pwd = ''
+  return function (){
+    pwd += Math.round(Math.random() * 9)
+    console.log(pwd);
   }
 }
 
-const res = checkStr(str_1, str_2);
-console.log(res);
+const pass = getPass()
+
+
+
+pass()
+pass()
+pass()
+pass()
+pass()
+pass()
+pass()
+pass()
