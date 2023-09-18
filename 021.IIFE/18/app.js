@@ -1,20 +1,34 @@
-// 18. Написать функцию, принимающую в параметрах дату в формат “xx/xx/xxxx”.
-// Функция должна преобразовать строку в формат “xxxx-xx-xx”
+// Напишите функцию, которая принимает адрес электронной почты и возвращает
+// объект с полями email и active. Поле active должно быть true, если адрес содержит
+// символ '@' и '.com’ / ‘.by', и false в противном случае.
+// {
+// email,
+// active: true / false
+// }
 
-const date = "xx/xx/xxxx";
+const obj = {
+  email: "mrfredyonmail.com",
+  active: "",
+  checkValidEmail: function () {
+    if (this.email.includes("@" && (".com" || ".by"))) {
+      this.active === true;
+    } else {
+      this.active = false;
+    }
+  },
+};
 
-function isValidSLSH(date) {
-  return date.includes("/") ? true : false;
-}
+// email.split("");
+// function checkValidEmail(email) {
+//   if (email.includes("@" && (".com" || ".by"))) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-function changeDate(date) {
-  const bool = isValidSLSH(date);
-  if (bool === true) {
-    return date.replaceAll("/", "-").split("").reverse().join("");
-  } else {
-    return "error";
-  }
-}
+// console.log(checkValidEmail(email));
 
-const res = changeDate(date);
-console.log(res);
+checkValidEmail();
+
+console.log(obj);
