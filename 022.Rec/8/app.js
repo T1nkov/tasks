@@ -10,3 +10,5 @@ function sumArr (arr){
 
 const res = sumArr(arr)
 console.log(res);
+
+// asdasd
