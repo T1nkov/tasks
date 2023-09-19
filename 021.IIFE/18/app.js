@@ -1,20 +1,17 @@
-// 18. Написать функцию, принимающую в параметрах дату в формат “xx/xx/xxxx”.
-// Функция должна преобразовать строку в формат “xxxx-xx-xx”
+const arr = [1, 2, 3, 4, 5, 6, 7];
 
-const date = "xx/xx/xxxx";
+let sum = 0;
 
-function isValidSLSH(date) {
-  return date.includes("/") ? true : false;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i];
 }
+console.log(sum);
 
-function changeDate(date) {
-  const bool = isValidSLSH(date);
-  if (bool === true) {
-    return date.replaceAll("/", "-").split("").reverse().join("");
-  } else {
-    return "error";
-  }
-}
+const sum1 = arr.reduce((sum, el) => {
+  return sum + el;
+}, 0);
 
-const res = changeDate(date);
-console.log(res);
+console.log(sum1);
+
+// ты HR эксперт, 
+// какие вопросы ты бы задавал нач специалисту на озн собесе 
