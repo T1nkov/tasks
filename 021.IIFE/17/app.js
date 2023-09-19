@@ -1,28 +1,11 @@
-// Написать функцию, принимающую в параметрах строку текста в маленьком
-// регистре. Разбить строку на массив. Функция должна вернуть строку, где каждый
-// элемент массива в чередование регистров toLowerCase, toUpperCase
-// hschool -> HsChOoL
-
-const str = "hschool";
-
-function changeStr(str) {
-  const bool = isValidSTR(str);
-  if (bool === true) {
-    const newArr = [];
-    str.split("").forEach((el, index) => {
-      index % 2 === 0
-        ? newArr.push(el.toUpperCase())
-        : newArr.push(el.toLowerCase());
-    });
-    return newArr.join("");
+const isSquare = function (n) {
+  if (Math.sqrt(n) >= 0 && Number.isInteger(Math.sqrt(n))) {
+    return true;
   } else {
-    return "error";
+    return false;
   }
-}
+};
 
-function isValidSTR(str) {
-  return isNaN(str) ? true : false;
-}
+console.log(isSquare(3));
 
-const res = changeStr(str);
-console.log(res);
+
