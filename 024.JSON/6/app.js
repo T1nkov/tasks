@@ -21,7 +21,7 @@ function doTriangle(a, b, c) {
     isValidNumber(a, b, c);
     if (a + b > c || a + c > b || b + c > a) {
       return true;
-      console.log("dfasdf");
+      
     } else {
       return false;
     }
