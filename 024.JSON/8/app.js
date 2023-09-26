@@ -6,7 +6,15 @@
 
 const arr = ['a','b','c','d','f']
 
-function findLetter(params) {
+
+function isValidLetter (arr){
+  if(arr.every(el => !isNaN(el))){
+   throw new Error ('не массив')
+  }
+  return true
+}
+
+function findLetter(arr) {
   try {
     
   } catch (error) {

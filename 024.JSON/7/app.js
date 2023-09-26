@@ -10,6 +10,7 @@ function isValidNumber(num) {
   if (isNaN(num)) {
     throw new Error("not a number");
   }
+  return true
 }
 
 function inSqrt(num) {
