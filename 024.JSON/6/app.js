@@ -6,9 +6,9 @@
 // сторона окажется больше либо равна сумме двух других, то треугольника с
 // такими сторонами не существует.
 
-const a = 1;
-const b = 1;
-const c = 2;
+const a = 5;
+const b = 7;
+const c = 1000;
 
 function isValidNumber(a, b, c) {
   if (isNaN(a || b || c)) {
@@ -19,11 +19,10 @@ function isValidNumber(a, b, c) {
 function doTriangle(a, b, c) {
   try {
     isValidNumber(a, b, c);
-    if (a + b > c || a + c > b || b + c > a) {
+    if (a + b > c && a + c > b && b + c > a) {
       return true;
-      
     } else {
-      return false;
+      throw new Error("такого треугольника не существует");
     }
   } catch (error) {
     return error.message;
