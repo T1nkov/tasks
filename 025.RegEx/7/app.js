@@ -16,7 +16,7 @@ function isValidPass(pass) {
     if(!isNaN){}
   } catch (error) {
     return error.message;
-  }
+  // }ыва
 }
 
 const res = isValidPass(pass);
