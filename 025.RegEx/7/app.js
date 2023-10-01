@@ -16,8 +16,19 @@ function isValidPass(pass) {
     if(!isNaN){}
   } catch (error) {
     return error.message;
-  // }ыва
+  }
 }
 
 const res = isValidPass(pass);
+console.log(res);
+
+function doCount () {
+  
+let n = 0
+  const arr = [1,2,3,4]
+  if(count === arr.length ) return count
+  return doCount(n+1)
+}
+
+const res1 = doCount(n)
 console.log(res);

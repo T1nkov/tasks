@@ -3,21 +3,30 @@
 // ["a","b","c","d","f"] -> "e"
 // ["O","Q","R","S"] -> "P"
 
+const arr = ["a", "b", "c", "d", "f"].join("");
+const abc = "abcdefghijklmnopqrstuvwxyz";
 
-const arr = ['a','b','c','d','f']
+const index = abc.indexOf(input[0]);
 
+const sliceAbc = abx.slice(index);
 
-function isValidLetter (arr){
-  if(arr.every(el => !isNaN(el))){
-   throw new Error ('не массив')
+for (let i = 0; i < sliceAbc.length; i++) {
+  if (sliceAbc[i] != input[i]) {
+    console.log("пропала буква ", sliceAbc[i]);
+    break
   }
-  return true
+}
+
+function isValidLetter(arr) {
+  if (arr.every((el) => !isNaN(el))) {
+    throw new Error("не массив");
+  }
+  return true;
 }
 
 function findLetter(arr) {
   try {
-    
   } catch (error) {
-    return error.message
+    return error.message;
   }
 }
