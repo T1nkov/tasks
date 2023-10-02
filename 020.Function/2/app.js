@@ -6,9 +6,8 @@
 function changeWord() {
   const string = 'happy new year'.split(' ')
   for (let i = 0; i < string.length; i++) {
-    if (i % 2 !== 0) {
-      string[i] = string[i].toUpperCase();
-    }
+    if (i % 2 !== 0) string[i] = string[i].toUpperCase();
+    
   }
   console.log(string.join(" "));
 }

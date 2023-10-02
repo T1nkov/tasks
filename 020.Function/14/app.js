@@ -20,9 +20,7 @@ function maxNum(arr) {
       if (num < el) num = el;
     });
     return num;
-  } else {
-    return "error";
-  }
+  } else return "error";
 }
 
 const res = maxNum(arr);

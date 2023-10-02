@@ -24,11 +24,8 @@ function isValidNUM(arr) {
 
 function multiplyArr(arr) {
   const bool = isValidNUM(arr);
-  if (bool === true) {
-    return arr.reduce((middle, el) => middle * el, 1);
-  } else {
-    return "error";
-  }
+  if (bool === true) return arr.reduce((middle, el) => middle * el, 1);
+  else return "error";
 }
 
 const arr = doArr(n);

@@ -17,9 +17,7 @@ function doArr(len) {
 const arr = doArr(len);
 function filterArr(arr, n) {
   let res = arr.filter(function (el) {
-    if (el > n) {
-      return true;
-    }
+    if (el > n) return true;
   });
   return res;
 }

@@ -11,9 +11,7 @@ function checkStr(str) {
   const res = isValidSTR(str);
   if (res === true) {
     return str === str.split("").reverse("").join("") ? true : false;
-  } else {
-    return 'error'
-  }
+  } else return 'error'
 }
 
 let res = checkStr(str);

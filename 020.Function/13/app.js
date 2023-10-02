@@ -15,9 +15,7 @@ function checkStr(str_1, str_2) {
     return str_1.split("").sort().join("") === str_2.split("").sort().join("")
       ? true
       : false;
-  } else {
-    return "error";
-  }
+  } else return "error";
 }
 
 const res = checkStr(str_1, str_2);

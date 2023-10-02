@@ -17,9 +17,7 @@ function evenNums(arr) {
   if (res === true) {
     const even = arr.filter((element) => {
       const newArr = [];
-      if (element % 2 === 0) {
-        return newArr.push(element);
-      }
+      if (element % 2 === 0) return newArr.push(element);
     });
     return even;
   }

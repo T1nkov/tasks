@@ -25,9 +25,7 @@ function genNewArr(arr) {
   if (bool === true) {
     const res = arr.map((el) => (el % 2 === 0 ? el * el : el));
     return res;
-  } else {
-    return "error";
-  }
+  } else return "error";
 }
 
 const arr = doArr(n);

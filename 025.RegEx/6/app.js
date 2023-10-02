@@ -5,19 +5,22 @@
 // C:\Users\Admin\Desktop\test.txt -> true
 // C:/Users/Admin/Desktop/test.txt -> true
 
+const path = "C:\\Users\\Admin\\Desktop\\test.txt";
 
-const path = 'C:\\Users\\Admin\\Desktop\\test.txt'
-
-
-function isValidPath(path){
+function isValidPath(path) {
   try {
-    if(!/^[A-Z]:(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+\.[a-z0-9]+$/g.test(path)) throw new Error('error in path')
-    return true
+    if (
+      !/^[A-Z]:(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+(\\|\/)[a-zA-Z0-9]+\.[a-z0-9]+$/g.test(
+        path
+      )
+    )
+      throw new Error("error in path");
+    return true;
   } catch (error) {
-    return error.message
+    return error.message;
   }
 }
 
-const res = isValidPath(path)
+const res = isValidPath(path);
 
 console.log(res);
