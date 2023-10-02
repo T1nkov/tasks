@@ -3,8 +3,17 @@
 // Вырезая куски кода вы поняли, что их чересчур много. Необходимо написать
 // регулярное выражение, которое вырежет все комментарии из html разметки
 // <!-- -->
+const cod = "<!--kjdsafhaskjfhjksd-->";
 
-
-function deleteComm (){
-  
+function deleteComm(cod) {
+  try {
+    if(!/<!--(.|\n)*?-->/gm.test(cod)) throw new Error ('нет комментариев')
+    return cod.replaceAll("/<!--(.|\n)*?-->/gm", "");
+    
+  } catch (error) {
+    return error.message;
+  }
 }
+
+const res = deleteComm(cod);
+console.log(res);
