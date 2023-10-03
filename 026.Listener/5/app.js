@@ -4,16 +4,16 @@
 
 const btn = document.querySelector("button");
 const input = document.querySelector("input");
-
+const p = document.querySelector("p");
 btn.addEventListener("click", function () {
   try {
+    if (!input) throw new Error("input is empty");
+    else if (input.value <= 0) throw new Error("number is small");
     const arr = [0, 1];
-    if (input.value <= 0) throw new Error("small number");
-    else if (isNaN(input.value)) throw new Error("not a number");
     for (let i = 2; i < input.value; i++) {
       arr[i] = arr[i - 2] + arr[i - 1];
     }
-    alert(arr);
+    p.innerHTML = arr;
   } catch (error) {
     alert(error.message);
   }
