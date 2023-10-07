@@ -5,20 +5,24 @@
 
 const btn = document.querySelector("button");
 
-const tbody = document.querySelector("tbody");
-
 const input = document.querySelector("input");
+
+const tbody = document.querySelector("tbody");
 
 const arr = [];
 btn.addEventListener("click", function (event) {
   try {
     if (!input.value) throw new Error("input is empty");
-    const secondItem = document.createElement("td");
-    const text = document.createTextNode(input.value);
-    secondItem.appendChild(text);
-    arr.push(secondItem);
-
+    const tr = document.createElement("tr");
+   
+    const td = document.createElement("td");
+    td.textContent = input.value;
+   
+    tr.appendChild(td);
+   
+    tbody.appendChild(tr);
+    input.value = "";
   } catch (error) {
-    console.log(error.message);
+    alert(error.message);
   }
 });
