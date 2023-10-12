@@ -1,28 +1,13 @@
-// *Дана таблица c 1 колонкой. Под таблицей
-// сделайте форму (инпут и кнопка), с помощью
-// которой можно будет добавить нового
-// значение в таблицу.
+// . У вас есть массив с данными. Извлеките первый и второй элементы массива с
+// использованием деструктуризации
 
-const btn = document.querySelector("button");
+const arr = ["Dima", "19", "Alex", "Hanna"];
 
-const input = document.querySelector("input");
+function retUser(arr) {
+  const [name, age] = arr;
+  return name + age;
+}
 
-const tbody = document.querySelector("tbody");
+const res = retUser(arr);
 
-const arr = [];
-btn.addEventListener("click", function (event) {
-  try {
-    if (!input.value) throw new Error("input is empty");
-    const tr = document.createElement("tr");
-   
-    const td = document.createElement("td");
-    td.textContent = input.value;
-   
-    tr.appendChild(td);
-   
-    tbody.appendChild(tr);
-    input.value = "";
-  } catch (error) {
-    alert(error.message);
-  }
-});
+console.log(res);

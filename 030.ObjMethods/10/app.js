@@ -1,19 +1,16 @@
-// Вы вводите строку. Проверить является ли это слово палиндром. Добавить
-// проверки
+// 3. У вас есть объект с информацией о пользователе. Извлеките имя и возраст
+// пользователя с использованием деструктуризации.
 
-const btn = document.querySelector("button");
-const input = document.querySelector("input");
-const p = document.querySelector("p");
+const user = {
+  name: "Dima",
+  age: 19,
+};
 
-btn.addEventListener("click", function () {
-  try {
-    if (!input.value) throw new Error("пусто");
-    if (input.value.split("").reverse().join("") === input.value) {
-      p.textContent = `Результат это палиндром `;
-    } else {
-      p.textContent = `Результат это не палиндром `;
-    }
-  } catch (error) {
-    console.log(error.message);
-  }
-});
+function retUser(user) {
+  const { name, age } = user;
+  return name +  age;
+}
+
+const res = retUser(user);
+
+console.log(res);
