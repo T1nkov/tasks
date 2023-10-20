@@ -44,6 +44,7 @@ class ServerPostP {
     }) 
     data.push({ id: data.length+1,...json });
     return data;
+    return check
   }
 }
 
