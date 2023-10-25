@@ -37,14 +37,15 @@ class ServerPostP {
       { id: 2, name: "Hanna", age: 22 },
       { id: 3, name: "Stanislau", age: 25 },
       { id: 4, name: "German", age: 18 },
-      { id: 5, name: "Maria", age: 27 },
+      { id: 5, name: "Maria", age: 297 },
     ];
-    const check = data.some(function(el){
-      if(el.name == json.name) return true
-    }) 
-    data.push({ id: data.length+1,...json });
+    const check = data.some(function (el) {
+      if (el.name == json.name) return true;
+      
+    });
+    data.push({ id: data.length + 1, ...json });
     return data;
-    return check
+    return check;
   }
 }
 
