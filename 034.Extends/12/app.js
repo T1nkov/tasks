@@ -23,3 +23,5 @@ function modeArr() {
 getArr();
 const res = modeArr();
 console.log(newArr);
+const res = modeArr();
+console.log(newArr);
