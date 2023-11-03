@@ -9,4 +9,5 @@ const div = document.querySelector("div");
 list.addEventListener("click", (event) => {
   div.innerHTML = event.target.textContent;
   div.innerHTML = 'event.target.textContent;'
+  div.innerHTML = 'event.target.textContent;'
 });
