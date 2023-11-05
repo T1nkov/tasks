@@ -10,4 +10,5 @@ list.addEventListener("click", (event) => {
   div.innerHTML = event.target.textContent;
   div.innerHTML = 'event.target.textContent;'
   div.innerHTML = 'event.target.textContent;'
+  div.innerHTML = 'event.target.textContent;'
 });
