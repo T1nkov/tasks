@@ -1,53 +1,67 @@
-// Реализуйте класс ServerPost. Обязательными функциями считаются функции
-// middleware, controller, service, repository. Цепочка взаимодействия между методами
-// следующая:
-// middleware -> controller -> service -> repository, где:
-// middleware – функция валидатор
-// controller – функция, принимающая данные. Принимает json
-// service – функция проверки на то что с repository вернулось значение
-// repository – функция, симулирующая БД. Хранит массив данных. Взаимодействие с
-// этим массивом осуществляется только в repository. Массив находится в приложении
-// Задание:
-// на вход подается JSON вида:
-// `{
-// "name": "Test", "age": 1
-// }`
-// Необходимо добавить в массив БД объект только в том случае, если нет совпадений
-// по name. Если совпадения нет, то в объект клиента добавить ключ id с последним
-// возможным уникальным id БД, таким образом, чтобы в БД был запушен объект вида
-// {"id": 6, "name": "Test", "age": 1}
-// Если совпадение есть – ошибка. Добавить проверки
+/* 5. Реализуйте класс Server, получающий объект из предыдущего задания и
+сохраняющий его в «БД» (массив). Обязательными функциями считаются функции
+middleware, controller, service, repository. Цепочка взаимодействия между
+методами следующая:
+middleware -> controller -> service -> repository, где:
+middleware – функция валидатор
+controller – функция, принимающая данные. Принимает json
+service – функция проверки на то что с repository вернулось значение
+repository – функция, симулирующая БД. Хранит массив данных. Взаимодействие с
+этим массивом осуществляется только в repository. Массив находится в
+приложении
+ */
 
-class ServerPostP {
-  middleware(json) {
-    const res = this.controller(json);
-    return res;
-  }
-  controller(json) {
-    const res = this.service(json);
-    return res;
-  }
-  service(json) {
-    const res = this.repository(json);
-    return res;
-  }
-  repository(json) {
-    const data = [
-      { id: 1, name: "Yesenia", age: 22 },
-      { id: 2, name: "Hanna", age: 22 },
-      { id: 3, name: "Stanislau", age: 25 },
-      { id: 4, name: "German", age: 18 },
-      { id: 5, name: "Maria", age: 27 },
-    ];
-    const check = data.some(function(el){
-      if(el.name == json.name) return true
-    }) 
-    data.push({ id: data.length+1,...json });
-    return data;
-    return check
+class Client {
+  doRegistration() {
+      const login = document.querySelector('#login');
+      const pwd = document.querySelector('#pwd');
+      const btn = document.querySelector('button');
+
+      btn.addEventListener('click', () => {
+          let clientData = {
+              email: login.value,
+              pwd: pwd.value
+          }
+          const server = new Server();
+          server.controller(clientData);
+          console.log(server.controller(clientData));
+      })
   }
 }
 
-const serverPostP = new ServerPostP();
-const json = JSON.parse(`{"name": "Test", "age": 1}`);
-console.log(serverPostP.middleware(json));
+class Server {
+  controller(clientData) {
+
+      try {
+          let ser = this.service(clientData);
+          return ser;
+      } catch (error) {
+          return error.message
+      }
+
+  }
+
+  service(clientData) {
+      let rep = this.repository(clientData);
+      return rep
+  }
+
+  repository(clientData) {
+      const data = [
+          { "id": 1, "email": "yesenia@mail.ru", "pwd": "pwdffff" },
+          { "id": 2, "email": "hanna@mail.ru", "pwd": "pwdfevcrdv" },
+          { "id": 3, "email": "stanislau@mail.ru", "pwd": "pwdtest" },
+          { "id": 4, "email": "german@mail.ru", "pwd": "pwdqqq" },
+          { "id": 5, "email": "maria@mail.ru", "pwd": "pwdfcel" }
+      ];
+
+      const check = data.filter(el => el.email == clientData.email);
+      if (check.length) throw new Error('not unique');
+      data.push({ id: data.length + 1, ...clientData })
+      return data
+  }
+
+}
+
+const client = new Client();
+client.doRegistration();
