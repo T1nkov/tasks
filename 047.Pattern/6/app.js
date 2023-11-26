@@ -1,18 +1,36 @@
-// Вывести в строчку все вводимые значения через инпут в виде массива. Добавить
-// проверку, что поле не пустое
+// Вы вводите числа в поле для ввода формируя и отображая массив.
+// Необходимо в отдельный div вывести все числа кратные 3
 
-const btn = document.querySelector("button");
-const input = document.querySelector("input");
-const p = document.querySelector("p");
-
-btn.addEventListener("click", () => {
-  try {
-    if (!input.value) throw new Error("Empty input");
+class HTML {
+  changeaArr() {
+    const inp = document.querySelector("input");
+    const btn = document.querySelector("button");
+    const div = document.querySelector("div");
+    const p = document.querySelector("p");
     const arr = [];
-    arr.push(input.value);
-    p.innerHTML += `${arr}, `;
-    input.value = "";
-  } catch (error) {
-    alert(error.message);
+    const arrT = [];
+
+    btn.addEventListener("click", () => {
+      try {
+        if (!inp.value) throw new Error("empty");
+        if (isNaN(inp.value)) throw new Error("isnot a number");
+        if (inp.value % 3 == 0) arrT.push(inp.value);
+        arr.push(inp.value);
+
+        div.innerHTML = arr;
+        inp.value = "";
+
+        p.innerHTML = arrT;
+      } catch (error) {
+        inp.value = error.message;
+      }
+    });
+    btn.addEventListener('dblclick', ()=>{
+      inp.value = ''
+    })
   }
-});
+}
+
+const html = new HTML();
+
+html.changeaArr();

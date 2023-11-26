@@ -1,75 +1,21 @@
-// Реализовать следующие классы Круг, Треугольник и Квадрат, которые
-// наследуются от Figure. Каждый экземпляр класса должен содержать свойства
-// Площадь и Имя. Вывести всю информацию о фигурах в консоль. Площадь должна
-// рассчитываться по математическим формулам. Класс Figure содержит поля: pi =
-// 3.14, r = radius, a = side, h = height, а также сеттеры для данных полей. Дочерние
-// классы содержать геттеры на получение площади
+// У вас есть 3 инпута. Необходимо вывести в div результат конкатенацию всех
+// инпутов по клику на кнопку
 
-class Figure {
-  pi = 3.14;
-  r;
-  a;
-  h;
-  setR(r) {
-    this.r = r;
-  }
-  setA(a) {
-    this.a = a;
-  }
-  setH(h) {
-    this.h = h;
+class HTML {
+  doConcat() {
+    const inp1 = document.querySelector(".f");
+    const inp2 = document.querySelector(".s");
+    const inp3 = document.querySelector(".t");
+    const btn = document.querySelector("button");
+    const p = document.querySelector("p");
+
+    btn.addEventListener("click", () => {
+      p.innerHTML = inp1.value + inp2.value + inp3.value;
+    });
   }
 }
 
-class Circle extends Figure {
-  name = "circle";
-  square;
-  setSquare() {
-    this.square = this.pi * this.r ** 2;
-  }
-  getSquare() {
-    return `${this.name} ${this.square}`;
-  }
-}
 
-class Triangle extends Figure {
-  name = "Triangle";
-  square;
-  setSquare() {
-    this.square = 0.5 * this.a * this.h;
-  }
-  getSquare() {
-    return `${this.name} ${this.square}`;
-  }
-}
+const html = new HTML()
 
-class Square extends Figure {
-  name = "Square";
-  square;
-  setSquare() {
-    this.square = this.h * this.h;
-  }
-  getSquare() {
-    return `${this.name} ${this.square}`;
-  }
-}
-
-const circle = new Circle();
-
-circle.setR(5);
-
-circle.setSquare();
-console.log(circle.getSquare());
-
-const triangle = new Triangle();
-triangle.setA(5);
-triangle.setH(10);
-
-triangle.setSquare();
-
-console.log(triangle.getSquare());
-
-const square = new Square();
-square.setH(10);
-square.setSquare();
-console.log(square.getSquare());
+html.doConcat()
