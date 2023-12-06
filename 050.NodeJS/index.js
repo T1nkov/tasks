@@ -11,11 +11,11 @@ app.get("/", (req, res) => {
   const arr = [
     1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 3, 4, 5, 3, 4, 4, 4, 2, 1,
   ];
-  const uniq = [];
+  const uniqa = [];
   for (let i = 0; i < arr.length; i++) {
     if (!uniq.includes(arr[i])) uniq.push(arr[i]);
   }
-  res.send(uniq);
+  res.send(uniqa);
 });
 
 app.listen(3000, () => {
