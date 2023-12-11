@@ -54,6 +54,9 @@ const data = [
 function getAllData() {
   if (!json.length) throw new Error("arr is enpty");
   return data;
+}function getAllData() {
+  if (!json.length) throw new Error("arr is enpty");
+  return data;
 }
 
 function getId(id) {
