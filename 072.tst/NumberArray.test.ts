@@ -4,7 +4,7 @@
 // getEvenNumbers(): number[] - возвращает массив только четных чисел из массива
 
 class NumberArray {
-  arr: number[];
+  arr: number[] = [1,2,3];
 
   getSum(): number {
     try {
@@ -29,6 +29,6 @@ describe('test for numArray', ()=>{
     test('true', ()=>{
         const numberArray = new NumberArray();
         const result = numberArray.getSum()
-        expect(result).toBe()
+        expect(result).toBe(6)
     })
 })

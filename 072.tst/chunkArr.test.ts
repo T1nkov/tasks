@@ -21,7 +21,7 @@ function chunkArray(arr: any[], size: number): any[][] {
 
 describe("test chunk arr", () => {
   test("get success", () => {
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    const arr = [1, 2, 3, 4, 5, 6];
     const res = chunkArray(arr, 2);
     expect(res).toEqual([[1, 2], [3, 4], [5, 6]]);
     expect(res.length).toBeGreaterThan(0)
@@ -34,3 +34,7 @@ describe("test chunk arr", () => {
     
   });
 });
+
+
+
+
