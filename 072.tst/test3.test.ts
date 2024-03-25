@@ -29,4 +29,8 @@ describe("test a calculation", () => {
     const res = calculateFactorial(-10);
     expect(res).toBe("n<0");
   });
+  test("true", () => {
+    const res = calculateFactorial(-10);
+    expect(res).toBe("n>0");
+  });
 });
